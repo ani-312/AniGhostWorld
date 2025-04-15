@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AniGhostWorld</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="bgSound" autoplay loop>
+    <source src="assets/ghost-jungle-74373.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- LOGIN SCREEN -->
+  <div class="container" id="loginScreen">
+    <h1>👻 Welcome to AniGhostWorld</h1>
+    <input type="text" id="username" placeholder="Enter your name" required />
+    <label>
+      Is your heart strong?
+      <select id="heartCheck">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+    </label>
+    <button onclick="startGame()">Enter Ghost World</button>
+  </div>
+
+  <!-- MOTIVATION SCREEN -->
+  <div class="container hidden" id="motivationScreen">
+    <h2>🧠 You’re not ready… but that’s okay!</h2>
+    <p>“Fear doesn’t shut you down; it wakes you up.”</p>
+    <p>“Be brave. Even if you’re not, pretend to be. No one can tell the difference.”</p>
+    <p>Come back when you feel stronger. We believe in you! 💪</p>
+  </div>
+
+  <!-- WARNING SCREEN -->
+  <div class="container hidden" id="warningScreen">
+    <h1>⚠️ FINAL WARNING</h1>
+    <p>Once you enter... there's no going back.</p>
+    <p>This world is haunted, cursed, and full of restless spirits.</p>
+    <p>Think twice before continuing...</p>
+    <button onclick="enterGhostWorld()">I’m Ready 😈</button>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div class="container hidden fade-in" id="gameScreen">
+    <h2>😱 Welcome, <span id="playerName"></span>! Can you survive?</h2>
+    <div id="timerContainer">⏳ Time Left: <span id="timer">60</span> seconds</div>
+    <div id="puzzleBox"></div>
+    <button onclick="submitAnswer()">Submit Answer</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

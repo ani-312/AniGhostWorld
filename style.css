@@ -1,0 +1,83 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/027/446/730/small/terrifying-female-ghost-with-black-hair-in-a-dark-forest-silhouette-concept-free-photo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  padding: 50px;
+  max-width: 600px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 10%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px crimson;
+  animation: fadeIn 2s ease-in-out;
+}
+
+input, select {
+  padding: 10px;
+  margin: 10px;
+  font-size: 1rem;
+  width: 90%;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background: crimson;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#timerContainer {
+  font-size: 1.5rem;
+  color: red;
+  margin: 20px;
+  animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+#warningScreen h1 {
+  font-size: 3rem;
+  color: crimson;
+  animation: flicker 2s infinite;
+}
+
+#warningScreen p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-top: 20%;
+    padding: 30px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+}
